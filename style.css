@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+:root{
+	--primaryColor: #43e6cd;
+	--dancing: 'Dancing Script', cursive;
+	--dmsans: 'DM Sans', sans-serif;
+	--poppins: 'Poppins', sans-serif;
+
+}
+
+
+
+/*............................Mobile First Design...............................*/
+@media only screen and (min-width: 300px){
+.container{
+	width: 100%;
+	height: 100vh;
+}
+
+.main{
+	width: 100%;
+	height: 100vh;
+}
+
+#circle{
+	position: absolute;
+	background: var(--primaryColor);
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	transform: translate(-4rem, -8.5rem);
+	z-index: -1;
+}
+
+#brandName{
+	position: absolute;
+	color: white;
+	font-size: 1.9rem;
+	margin: 3rem 0.4rem auto;
+	font-family: var(--poppins);
+	letter-spacing: 0.2rem;
+}
+
+
+.bodyTxt{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	z-index: -2;
+	display: flex;
+	text-align: justify-all;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#hero1,#hero2{
+	margin-top: -1rem;
+	letter-spacing: 1px;
+}
+
+#hero3{
+	margin-top: 0.3rem;
+	letter-spacing: 0.8px;
+}
+
+#hero4{
+	letter-spacing: 0.7px;
+	margin-top: 0.3rem;
+}
+
+#hero1{
+	font-size: 3.3rem;
+	font-family: var(--dmsans);
+	color: var(--primaryColor);
+	font-weight: bold;
+}
+
+
+#hero2{
+	font-size: 3.1rem;
+	font-family: var(--poppins);
+	color: black;
+}
+
+#hero3{
+	font-size: 1.3rem;
+	color: grey;
+	font-family: var(--dmsans);
+}
+
+#hero4{
+	font-size: 1.2rem;
+	color: grey;
+	font-family: var(--dmsans);
+	font-weight: bold;
+}
+
+.btnSection{
+	margin-top: 2rem
+}
+
+#getStartedBtn{
+	padding: 1.2rem 4rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 2rem;	
+	font-weight: bold;
+	background: var(--primaryColor);
+	color: white;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.hamburgerIcon{
+	position: absolute;
+}
+
+.bar{
+	right: 1rem;
+	top:  1rem;
+	z-index: 100;
+	background-color: var(--primaryColor);
+}
+
+.color_Change{
+	background: white;
+}
+
+.bar1{
+	position: absolute;
+	width: 4rem;
+	height: 0.4rem;
+	margin-top: 1rem;
+
+}
+
+
+.bar2{
+	position: absolute;
+	width: 4rem;
+	height: 0.4rem;
+	margin-top: 2rem;
+}
+
+.bar3{
+	position: absolute;
+	width: 4rem;
+	height: 0.4rem;
+	margin-top: 3rem;
+}
+
+
+.navBar{
+	position: absolute;
+	background: var(--primaryColor);
+	width: 100%;
+	height: 100vh;
+	clip-path: circle(0% at 0px -5rem);
+	transition: 1s;
+}
+
+.navBar_Open{
+	clip-path: circle(200% at 0px -5rem);
+}
+
+.navlink{
+	list-style: none;
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-family: var(--poppins);
+	color: white;
+	font-weight: bold;
+}
+
+.navlist{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#laptopImg{
+	display: none;
+
+}
+
+#mobileImg{
+	display: none;
+}
+
+.wall{
+	display: none;
+}
+
+}
+
+/*....................Tablet Based Design.............................*/
+
+
+
+@media only screen and (min-width: 500px){
+
+*{
+	font-size: 11px;
+}
+
+body{
+	background-color: ghostwhite;
+}
+
+.bodyTxt{
+	padding-top: 3rem;
+}
+
+#hero1{
+	font-size: 3.4rem;
+}
+
+#hero2{
+	font-size: 3.5rem;
+}
+
+#laptopImg{
+	display: none;
+}
+
+#mobileImg{
+	display: none;
+}
+
+
+}
+
+
+@media only screen and (min-width: 950px){
+
+
+	#hamburgerIcon{
+		display: none;
+	}
+
+
+	.navBar{
+		border-top-left-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+		position: absolute;
+		width: 50%;
+		height: 100vh;
+		clip-path: circle(200% at 0px 0px);
+		right: 0;
+	}
+
+	.navlist{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+
+	.navlink{
+		list-style: none;
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-family: var(--poppins);
+		color: white;
+		font-weight: bold;
+		padding-top: 2.8rem;
+	}
+
+	.bodyTxt{
+		width: 50%;
+		height: 100vh;
+	}
+
+	
+	#laptopImg{
+		display: inline-block;
+		position: absolute;
+		width: 50rem;
+		height: 30rem;
+		left: -20%;
+		top: 40%;
+	}
+
+
+
+	#mobileImg{
+		display: inline-block;
+		position: absolute;
+		left: 70%;
+		top: 25%;
+		transform: scale(1.5);
+	  
+	}
+
+
+
+}
+
+
+
+
